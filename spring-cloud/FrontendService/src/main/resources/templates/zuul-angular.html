@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Zuul</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+ 
+<script>
+var app = angular.module("myApp", []);
+app.controller('HelloController',function($scope, $http) {
+	$scope.mainTitle = "Posts";
+	$http.get('/jph/posts').success(function(result) {
+			console.log(result);
+			$scope.posts = result;
+	})
+});
+</script>
+ 
+<div ng-controller="HelloController">
+	
+	<h1>{{mainTitle}}</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Body</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="post in posts">
+				<td>{{post.title}}</td>
+				<td>{{post.body}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+</div>
+</body>
+</html>

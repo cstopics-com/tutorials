@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customers and Products</title>
+</head>
+<body>
+	<h1> Customers </h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="customer: ${customers}">
+				<td th:text="${customer.firstname}" />
+				<td th:text="${customer.lastname}" />
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	
+	<h1> Products </h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="product: ${products}">
+				<td th:text="${product.name}" />
+				<td th:text="${product.description}" />
+			</tr>
+		</tbody>
+	</table>
+	
+	
+</body>
+</html>

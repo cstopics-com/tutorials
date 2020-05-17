@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Page</title>
+</head>
+<body>
+	<h1> Hello </h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Gender</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="user: ${users}">
+				<td th:text="${user.firstname}" />
+				<td th:text="${user.lastname}" />
+				<td>
+    				<span th:if="${user.gender} == 'M'" th:text="Man" /> 
+    				<span th:unless="${user.gender} == 'M'" th:text="Woman" />
+				</td>
+				
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

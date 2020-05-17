@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-svc
+spec:
+  type: NodePort
+  selector:
+    run: nodejs-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

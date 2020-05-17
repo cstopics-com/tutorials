@@ -1,0 +1,17 @@
+db:
+    image: mysql:5.7
+    environment:
+        MYSQL_ROOT_PASSWORD: somewordpress
+        MYSQL_DATABASE: wordpress
+        MYSQL_USER: wordpress
+        MYSQL_PASSWORD: wordpress
+wordpress:
+    image: wordpress
+    links:
+        - db:mysql
+    ports:
+        - 8080:80
+    environment:
+        WORDPRESS_DB_USER: wordpress
+        WORDPRESS_DB_PASSWORD: wordpress
+        WORDPRESS_DB_NAME: wordpress        

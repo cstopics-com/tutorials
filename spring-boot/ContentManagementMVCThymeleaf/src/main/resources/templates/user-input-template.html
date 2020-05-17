@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Input Page</title>
+</head>
+<body>
+	<h1> Hello </h1>
+	
+	<form action="#" th:action="@{/saveuser}" th:object="${user}" method="post">
+	<ul>
+    	<li th:each="err : ${#fields.errors('firstname')}" th:text="${err}" />
+    	<li th:each="err : ${#fields.errors('lastname')}" th:text="${err}" />
+	</ul>
+	
+    <table >
+        <tr>
+            <td><label th:text="#{msg.firstname}" /></td>
+            <td><input type="text" th:field="*{firstname}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.lastname}" /></td>
+            <td><input type="text" th:field="*{lastname}" /></td>
+        </tr>
+        <tr>
+         	<td>&nbsp;</td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+	</form>
+	
+	
+	<ul>
+    	<li th:each="err : ${#fields.errors('*')}" th:text="${err}" />
+	</ul>
+	
+	
+</body>
+</html>
