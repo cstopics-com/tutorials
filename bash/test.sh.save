@@ -1,0 +1,2 @@
+echo "Current Time is: $Hour:$Minute:$Second"
+
