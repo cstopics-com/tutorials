@@ -1,0 +1,12 @@
+<Person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="demo.xsd">
+  <Name>Hamid Kobdani</Name>
+  <Address> 
+    <Street>Adl Street</Street> 
+	<Number>5</Number> 
+  </Address> 
+  <Address>
+    <Street>Zed Street</Street>
+	<Number>168</Number>
+  </Address>
+</Person> 
