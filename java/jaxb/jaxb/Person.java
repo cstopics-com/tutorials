@@ -2,11 +2,11 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.09.22 um 04:22:14 PM CEST 
+// Generiert: 2020.09.23 um 11:24:21 AM CEST 
 //
 
 
-package demo;
+package jaxb;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,17 +17,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für PersonType complex type.
+ * <p>Java-Klasse für Person complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="PersonType">
+ * &lt;complexType name="Person">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Address" type="{}AddressType" maxOccurs="unbounded"/>
+ *         &lt;element name="Address" type="{}Address" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,16 +37,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PersonType", propOrder = {
+@XmlType(name = "Person", propOrder = {
     "name",
     "address"
 })
-public class PersonType {
+public class Person {
 
     @XmlElement(name = "Name", required = true)
     protected String name;
     @XmlElement(name = "Address", required = true)
-    protected List<AddressType> address;
+    protected List<Address> address;
 
     /**
      * Ruft den Wert der name-Eigenschaft ab.
@@ -90,13 +90,13 @@ public class PersonType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AddressType }
+     * {@link Address }
      * 
      * 
      */
-    public List<AddressType> getAddress() {
+    public List<Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<AddressType>();
+            address = new ArrayList<Address>();
         }
         return this.address;
     }

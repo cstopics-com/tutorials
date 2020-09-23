@@ -12,17 +12,17 @@ public class Exercise1 {
 
 		try {  
 
-			File file = new File("question.xml");  
-			JAXBContext jaxbContext = JAXBContext.newInstance(Question.class);  
+			File file = new File("demo.xml");  
+			JAXBContext jaxbContext = JAXBContext.newInstance(Person.class);  
 
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();  
-			Question que= (Question) jaxbUnmarshaller.unmarshal(file);  
+			Person person= (Person) jaxbUnmarshaller.unmarshal(file);  
 
-			System.out.println(que.getId()+" "+que.getQuestionname());  
-			System.out.println("Answers:");  
-			List<Answer> list=que.getAnswers();  
-			for(Answer ans:list)  
-				System.out.println(ans.getId()+" "+ans.getAnswername()+"  "+ans.getPostedby());  
+			System.out.println(person.getName());  
+			System.out.println("Adresses:");  
+			List<Address> list=person.getAddress();  
+			for(Address adress:list)  
+				System.out.println("  "+adress.getStreet()+" "+adress.getNumber());  
 
 		} catch (JAXBException e) {  
 			e.printStackTrace();  

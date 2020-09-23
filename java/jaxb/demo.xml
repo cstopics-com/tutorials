@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
+<Person>
+  <Name>John Smith</Name>
+  <Address> 
+    <Street>ABC Street</Street> 
+	<Number>5</Number> 
+  </Address> 
+  <Address>
+    <Street>Zed Street</Street>
+	<Number>168</Number>
+  </Address>
+</Person> 

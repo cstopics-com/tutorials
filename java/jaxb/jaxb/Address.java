@@ -2,11 +2,11 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.09.22 um 04:22:14 PM CEST 
+// Generiert: 2020.09.23 um 11:24:21 AM CEST 
 //
 
 
-package demo;
+package jaxb;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,12 +16,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für AddressType complex type.
+ * <p>Java-Klasse für Address complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="AddressType">
+ * &lt;complexType name="Address">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -36,11 +36,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AddressType", propOrder = {
+@XmlType(name = "Address", propOrder = {
     "number",
     "street"
 })
-public class AddressType {
+public class Address {
 
     @XmlElement(name = "Number")
     @XmlSchemaType(name = "unsignedInt")
